@@ -1,0 +1,19 @@
+{
+    "words": [
+        {
+            "id": "0",
+            "english": "Hello",
+            "german": "Hallo"
+        },
+        {
+            "id": 1,
+            "english": "Good Morning",
+            "german": "Guten Morgen"
+        },
+        {
+            "id": 2,
+            "english": "Good Bye",
+            "german": "Verabschiedung"
+        }
+    ]
+}
