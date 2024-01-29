@@ -1,7 +1,7 @@
 {
     "words": [
         {
-            "id": "0",
+            "id": 0,
             "english": "Hello",
             "german": "Hallo"
         },
@@ -14,6 +14,26 @@
             "id": 2,
             "english": "Good Bye",
             "german": "Verabschiedung"
+        },
+        {
+            "id": 3,
+            "english": "Water",
+            "german": "Wasser"
+        },
+        {
+            "id": 4,
+            "english": "Fire",
+            "german": "Feuer"
+        },
+        {
+            "id": 5,
+            "english": "Yes",
+            "german": "Ja"
+        },
+        {
+            "id": 6,
+            "english": "No",
+            "german": "Nein"
         }
     ]
 }
