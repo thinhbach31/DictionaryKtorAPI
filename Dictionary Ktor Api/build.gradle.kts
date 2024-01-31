@@ -27,6 +27,10 @@ tasks {
     create("stage").dependsOn("installDist")
 }
 
+tasks.jar {
+    archiveFileName.set("Dictionary_Ktor_Api.jar")
+}
+
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-content-negotiation-jvm")

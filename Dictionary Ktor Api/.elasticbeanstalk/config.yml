@@ -1,0 +1,2 @@
+deploy:
+  artifact: build/libs/Dictionary_Ktor_Api.jar
