@@ -11,11 +11,6 @@ import kotlinx.coroutines.launch
 
 fun Route.wordRouting() {
     route("/word") {
-
-        CoroutineScope(Job()).launch {
-            WordFunc.getWords()
-        }
-
         get {
             val english = call.parameters["english"] ?: return@get call.respondText(
                 "Missing word",
@@ -23,13 +18,16 @@ fun Route.wordRouting() {
             )
             val param = call.request.queryParameters["english"]
             if (param != null) {
-                // Show products from the lowest price to the highest
-                val word =
-                    dictionary.find { it.english == param } ?: return@get call.respondText(
-                        "No word for $english",
-                        status = HttpStatusCode.NotFound
-                    )
-                call.respond(word)
+                dictionary.forEach {
+                    if (it.english == param) {
+                        call.respond(it)
+                        return@get
+                    }
+                }
+                call.respondText(
+                    "No word for $english",
+                    status = HttpStatusCode.NotFound
+                )
             }
         }
     }
